@@ -1,0 +1,122 @@
+/* 
+Theme Name: Istoragebox Theme Child
+Theme URI: https://istoragebox.com
+Description: A plain-vanilla & lightweight theme for Elementor page builder
+Author: Istoragebox Team
+Author URI: https://istoragebox.com/
+Template: My-Theme
+Text Domain: My-Theme-Child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/*
+    Add your custom styles here
+*/
+/* Slide In From The Top Option */
+
+.header-2 {
+ transform: translatey(-70px);
+ -moz-transition: all .3s ease!important;
+ -webkit-transition: all .3s ease!important;
+ transition: all .3s ease!important;
+}
+
+
+.elementor-sticky--effects.header-2  {
+ height: auto!important;
+ transform: translatey(0px);
+}
+
+.elementor-sticky--effects.header-1 {
+ display: none!important;
+}
+
+/* End Of Slide In From The Top Option */
+
+/*May be checked test*/
+.dddd .show{
+    display: none;
+    /*zhe jiu shi ying cang */
+}
+.dddd .show.active{
+    display: block;
+    /*zhe shi xian shi*/
+}
+.dddd .custom_avatar_click{
+    cursor: pointer;
+    /*she shi rang shu biao bian shou*/
+    border-radius: 6px;
+}
+.dddd .custom_avatar_click.active{
+    border: solid 2px #2D4DDB;
+}
+
+
+
+@charset "UTF-8";
+
+.downput .elementor-widget-container {
+	/* 收起容器 */
+	position: relative;
+	overflow: hidden;
+}
+
+.dp-btn-wrap {
+	/* 按钮包裹 */
+	display: grid;
+	grid-template-columns: 1fr 60px;
+	justify-content: end;
+	gap: 5px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background-color: none;
+}
+
+.dp-btn-wrap i {
+	/* 按钮前缀省略号 */
+	text-align: right;
+}
+
+.dp-btn-wrap .dp-btn {
+	/* 按钮样式 */
+	cursor: pointer;
+	padding: 5px 8px;
+	font-size: 14px;
+	background-color: #fff;
+	border-radius: 3px;
+	text-align: left;
+	font-family: "Lexend", Sans-serif;
+}
+
+.dp-btn-wrap .dp-btn[dp-status="1"]::before {
+	/* 收起按钮图标 */
+	content: "+";
+}
+
+.dp-btn-wrap .dp-btn[dp-status="2"]::before {
+	/* 展开按钮图标 */
+	content: "-";
+}
+
+#topbutton {
+  position: fixed;
+  display: none;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  right: 100px;
+  bottom: 15px;
+  z-index: 1;
+  background: #2C2C2FA1;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+}
+
+#topbutton:after {
+  content: "\2191";
+}

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.downput .elementor-widget-container {
+	/* 收起容器 */
+	position: relative;
+	overflow: hidden;
+}
+
+.dp-btn-wrap {
+	/* 按钮包裹 */
+	display: grid;
+	grid-template-columns: 1fr 60px;
+	justify-content: end;
+	gap: 5px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background-color: #fff;
+}
+
+.dp-btn-wrap i {
+	/* 按钮前缀省略号 */
+	text-align: right;
+}
+
+.dp-btn-wrap .dp-btn {
+	/* 按钮样式 */
+	cursor: pointer;
+	padding: 5px 8px;
+	font-size: 13px;
+	background-color: #fff;
+	border-radius: 3px;
+	text-align: left;
+	font-family: "Lexend", Sans-serif;
+}
+
+.dp-btn-wrap .dp-btn[dp-status="1"]::before {
+	/* 收起按钮图标 */
+	content: "+";
+}
+
+.dp-btn-wrap .dp-btn[dp-status="2"]::before {
+	/* 展开按钮图标 */
+	content: "-";
+}
